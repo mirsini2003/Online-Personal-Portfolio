@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Μυρσίνη Καφέτση | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --main-color: #2b2d42;
+      --accent-color: #ef233c;
+      --bg-color: #f8f9fa;
+      --white: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--main-color);
+    }
+
+    header {
+      background-image: url('coding7.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
+    nav {
+      background: var(--white);
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      gap: 2rem;
+      box-shadow: 0 2px 6px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--main-color);
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: 0.3s;
+    }
+
+    nav a:hover::after,
+    nav a.active::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-card {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px var(--shadow);
+      margin-bottom: 3rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      border-bottom: 2px solid var(--accent-color);
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    ul.skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+    }
+
+    ul.skills-list li {
+      background-color: var(--main-color);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 30px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    ul.skills-list li:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-4px);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .project {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px var(--shadow);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .project h3 {
+      padding: 1rem;
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--accent-color);
+    }
+
+    .project p {
+      padding: 0 1rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    #contact p {
+      text-align: center;
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+
+    #contact a {
+      color: var(--main-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #contact a:hover {
+      color: var(--accent-color);
+    }
+
+    footer {
+      background: #dee2e6;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Μυρσίνη Καφέτση</h1>
+    <p>Full Stack Software Developer | C# .NET</p>
+  </header>
+
+  <nav>
+    <a href="#about">Σχετικά</a>
+    <a href="#skills">Δεξιότητες</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Επικοινωνία</a>
+  </nav>
+
+  <section id="about">
+    <div class="section-card about">
+      <h2>Σχετικά με μένα</h2>
+      <p>Είμαι τελειόφοιτη φοιτήτρια Πληροφορικής στο Πανεπιστήμιο Πειραιά, με πάνω από 3 χρόνια εμπειρίας στην ανάπτυξη desktop εφαρμογών , κυρίως με <em>C#</em> και 
+      <em>.NET Framework.</em> <br>Κατά την διάρκεια των σπουδών μου έχω εργαστεί πάνω σε πολλά project (ατομικά και ομαδικά) αποκτώντας ουσιαστική εμπειρία στην ανάλυση, 
+        το σχεδιασμό και την υλοποίηση λογισμικού.Το ακαδημαϊκό μου υπόβαθρο μου έχει δώσει τα εργαλεία για την υλοποίηση ολοκληρωμένων έργων, τα οποία συνοδεύω 
+        με οδηγούς χρήσης, διαγράμματα (όπως UML) και λεπτομερή τεκμηρίωση κώδικα.
+        <br><br>
+        Αν και πειραματίζομαι με διάφορες τεχνολογίες, όπως <em>HTML, CSS, JavaScript, Java</em> και <em>C++</em>, η βασική μου αγάπη παραμένει η <em>C#</em>, μέσω της οποίας μπορώ 
+        να δημιουργώ λειτουργικές, φιλικές και καλά σχεδιασμένες εφαρμογές.
+
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-card">
+      <h2>Δεξιότητες</h2>
+      <ul class="skills-list">
+        <li>C#</li>
+        <li>Java</li>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>        
+        <li>Databases</li>
+        <li>Data Structures</li>
+        <li>GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-card">
+      <h2>Projects (Github)</h2>
+      <div class="projects">
+        <a class="project" href="https://github.com/mirsini2003/Web-Application-for-a-Mobile-Phone-Company" target="_blank">
+          <img src="global_tech.png" alt="Project 1" />
+          <h3>Εφαρμογή Κινητής Τηλεφωνίας</h3>
+          <p>Web εφαρμογή διαχείρισης πελατών με C# ASP.NET.</p>
+        </a>
+        <a class="project" href="https://github.com/mirsini2003/Digital-Museum-Application" target="_blank">
+          <img src="music_museum.png" alt="Project 2" />
+          <h3>Ψηφιακό Μουσείο</h3>
+          <p>Desktop εφαρμογή Μουσείου μουσικής με C# .NET Framework.</p>
+        </a>
+        <a class="project" href="https://github.com/mirsini2003/Digital-Bookstore-App" target="_blank">
+          <img src="bookstore.png" alt="Project 3" />
+          <h3>Ψηφιακό Βιβλιοπωλείο</h3>
+          <p>Εφαρμογή desktop για online βιβλιοπωλείο με C# .NET Framework.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-card">
+      <h2>Επικοινωνία</h2>
+      <p><strong>Τηλέφωνο:</strong> +30 69******09</p>
+      <p><strong>Email:</strong> <a href="mailto:mirsini.kafetsi@gmail.com">mirsini.kafetsi@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/myrsini-kafetsi/" target="_blank">linkedin.com/in/myrsini-kafetsi</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Μυρσίνη Καφέτση. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
